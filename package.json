@@ -1,0 +1,61 @@
+{
+  "name": "easy-gmail-mcp",
+  "version": "2.0.0",
+  "description": "Easy Gmail MCP - A powerful Model Context Protocol server for Gmail with full email reading, threaded replies, and attachment support",
+  "main": "dist/index.js",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GodotH/Easy-Gmail-MCP.git"
+  },
+  "author": "Godot Huard",
+  "contributors": [
+    {
+      "name": "Sallytion",
+      "url": "https://github.com/Sallytion/Gmail-MCP"
+    }
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "watch": "tsc --watch",
+    "test": "node dist/test.js",
+    "docker:build": "docker build -t easy-gmail-mcp .",
+    "docker:logs": "docker-compose logs -f easy-gmail-mcp",
+    "docker:shell": "docker-compose run --rm easy-gmail-mcp sh"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "gmail",
+    "email",
+    "imap",
+    "smtp",
+    "claude",
+    "ai",
+    "assistant",
+    "automation"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GodotH/Easy-Gmail-MCP/issues"
+  },
+  "homepage": "https://github.com/GodotH/Easy-Gmail-MCP#readme",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "dotenv": "^16.4.5",
+    "imap": "^0.8.17",
+    "mailparser": "^3.7.1",
+    "nodemailer": "^7.0.11",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/imap": "^0.8.40",
+    "@types/mailparser": "^3.4.5",
+    "@types/node": "^22.9.0",
+    "@types/nodemailer": "^6.4.19",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  }
+}
